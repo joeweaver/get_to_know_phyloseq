@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Installation</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="requirements">Requirements</h1>
+<ol type="1">
+<li>Anaconda</li>
+<li>R</li>
+<li>Phyloseq and other R packages</li>
+<li>RStudio (Optional)</li>
+<li>Phyloseq_demo_notebooks.zip file</li>
+</ol>
+<h1 id="installing-anaconda">Installing Anaconda</h1>
+<ol type="1">
+<li><a href="https://www.anaconda.com/download/">Download and install the Python 3.7 (or greater) version appropriate for you system</a></li>
+<li>Open the <em>Anaconda Command Prompt</em></li>
+<li>Test your install by typing <code>conda list</code>. This should print a list of installed packages</li>
+<li>Create a new anaconda environment by typing <code>conda create -n phylo_demo python=3.7</code> and answering yes to all prompts</li>
+<li>Activate the environment by typing <code>activate phylo_demo</code></li>
+</ol>
+<ul>
+<li>Adapted from online anaconda installation docs <a href="https://conda.io/docs/user-guide/install/windows.html">userguide</a></li>
+</ul>
+<h1 id="preparing-jupyter-notebook">Preparing Jupyter Notebook</h1>
+<p>conda install nb_conda conda install ipykernel jupyter notebook Ctrl-C, Ctrl-C</p>
+<ol type="1">
+<li>Close the command prompt</li>
+</ol>
+<h1 id="installing-r">Installing R</h1>
+<ol type="1">
+<li><a href="http://cran.mtu.edu/">Download and install the latest version of R for your system</a>
+<ol type="1">
+<li>Further installation instructions are available at: <a href="https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-R-under-Windows" class="uri">https://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-R-under-Windows</a></li>
+</ol></li>
+<li>To test your installation, open a new <em>Anaconda Command Prompt</em>, activate the <code>phylo_demo</code> environment, and try to start the R interepreter
+<ol type="1">
+<li>Under windows R will be located under a path <em>similar to</em>: <code>c:\program files\R\R-3.4.2\bin\R.exe</code></li>
+</ol></li>
+<li>Make R available to Jupyter (instructions from <a href="https://irkernel.github.io/installation/" class="uri">https://irkernel.github.io/installation/</a>)
+<ol type="1">
+<li>In the intrepreter enter the following lines: (If prompted for a CRAN mirror, select a nearby location).
+<ul>
+<li><code>install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))</code></li>
+<li><code>devtools::install_github('IRkernel/IRkernel')</code></li>
+<li><code>IRkernel::installspec()</code></li>
+</ul></li>
+</ol></li>
+</ol>
+<h1 id="installing-phyloseq-and-other-r-packages">Installing Phyloseq and other R packages</h1>
+<ol type="1">
+<li>Install the phyloseq package (instructions from <a href="https://joey711.github.io/phyloseq/install.html" class="uri">https://joey711.github.io/phyloseq/install.html</a>)
+<ol type="1">
+<li>In the intrepreter enter the following lines: (Update all packages if prompted).
+<ul>
+<li><code>source('http://bioconductor.org/biocLite.R')</code></li>
+<li><code>biocLite('phyloseq')</code></li>
+<li><code>packageVersion('phyloseq')</code></li>
+</ul></li>
+</ol></li>
+<li>The previous line tests the installation and should print phyloseq’s version, <em>similar</em> to <code>## [1] '1.22.3'</code></li>
+<li>In the interpreter install other packages by typing: <code>install.packages(&quot;tidyverse&quot;)</code>install.packages(“rlang”) install.packages(c(“assertthat”))</li>
+<li>Exit the R interpreter by typing <code>quit()</code> and saying ‘no’ if prompted to save a workspace image</li>
+<li>Leave the interpreter open</li>
+</ol>
+<h1 id="installing-rstudio-optional">Installing RStudio (Optional)</h1>
+<ol type="1">
+<li>We will not be using RStudio for the demo, but it is the primary environment in which you will develop R code when not in a jupyter notebook</li>
+<li>Installation instructions at <a href="https://www.rstudio.com/products/rstudio/download/#download" class="uri">https://www.rstudio.com/products/rstudio/download/#download</a></li>
+</ol>
+<h1 id="testing-jupyter">Testing Jupyter</h1>
+<ol type="1">
+<li>Download/copy the <code>Phyloseq_demo_notebooks.zip</code> file and extract to the directory of your choice</li>
+<li>Within the <code>Anaconda command prompt</code> change to the directory in which you extracted the demo files</li>
+<li>Start an interactive Jupyter session by typing <code>jupyter notebook</code></li>
+<li>This should open a web browser pointing to the jupyter notebook session.</li>
+<li>Ensure Jupyter understands R by clicking on the ‘new’ button, you should see an option to create a new notebook in R, like below: <img src="jupyter_r_test.png" alt="Successful R in Jupyter" /></li>
+<li>Load the <code>simple_r_test.ipynb</code> notebook in Jupyter by clicking on it</li>
+<li>Run the test by clicking <code>Cell</code> -&gt; <code>Run All</code></li>
+<li>You should see some output like…</li>
+<li>Load the <code>simple_phylo_test.ipynb</code> in Jupyter</li>
+<li>Run the test</li>
+<li>You should see…</li>
+</ol>
+<h1 id="phyloseq-demo">Phyloseq demo</h1>
+<ol type="1">
+<li>At this point, you should be able to run the demo</li>
+<li>If you still have Jupyter open, load <code>phylo_demo.ipnyb</code></li>
+<li>Otherwise open an anconda prompt, activate the phylo_demo environment, and start a jupyter session</li>
+<li>Follow the instructions to learn how to use phyloseq to analyze genomic data</li>
+<li>Stuck?
+<ol type="1">
+<li>On Jupyter itself? <a href="http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb">http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb</a></li>
+<li>Figuring out what answers to put into the demo: a filled in version is at <code>phylo_demo_completed.ipynb</code>. Try as much as possible to solve it yourself first, though</li>
+</ol></li>
+<li>Want to learn more: Extensive tutorials at: <a href="https://joey711.github.io/phyloseq/index.html" class="uri">https://joey711.github.io/phyloseq/index.html</a>, <a href="https://joey711.github.io/phyloseq/plot_tree-examples.html#example">For example</a>.</li>
+</ol>
+</body>
+</html>
