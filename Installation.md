@@ -3,7 +3,7 @@
 1. R
 1. Phyloseq and other R packages
 1. RStudio (Optional)
-1. Phyloseq_demo_notebooks.zip file
+1. Local copy of this repository
 
 
 # Installing Anaconda
