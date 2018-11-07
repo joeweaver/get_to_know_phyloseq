@@ -13,15 +13,17 @@
 1. Create a new anaconda environment by typing ```conda create -n phylo_demo python=3.7``` and answering yes to all prompts
 1. Activate the environment by typing ```activate phylo_demo```
 
-* Adapted from online anaconda installation docs [userguide](https://conda.io/docs/user-guide/install/windows.html)
+* Adapted from the [Anaconda installation guide](https://conda.io/docs/user-guide/install/windows.html)
 
-# Preparing Jupyter Notebook
-conda install nb_conda
-conda install ipykernel
-jupyter notebook
-Ctrl-C, Ctrl-C
+# Preparing the Jupyter Notebook
+1. Within the *Anaconda Command Prompt*, using the ```phylo_demo``` environment, type the following:
+    * ```conda install nb_conda```
+    * ```conda install ipykernel```
+    * ```jupyter notebook```
+1. A web browser should open and load the Jupyter file browser
+    1. You may have to reload the anaconda environment for this work. A straighforward way to do this is to close the command prompt, open it again, and re-activate ```phylo_demo```.
+1. To exit Jupyter, in the *Anaconda Command Prompt*, type ```Ctrl-C``` twice
 
-1. Close the command prompt
 
 # Installing R
 1. [Download and install the latest version of R for your system](http://cran.mtu.edu/)
