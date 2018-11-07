@@ -60,10 +60,12 @@
     ![Successful R in Jupyter](jupyter_r_test.png)
 1. Load the ```simple_r_test.ipynb``` notebook in Jupyter by clicking on it
 1. Run the test by clicking ```Cell``` -> ```Run All```
-1. You should see some output like...
+1. You should see some output like:
+    ![Successful running R](simple_r_test_output.png)
 1. Load the ```simple_phylo_test.ipynb``` in Jupyter
 1. Run the test
-1. You should see...
+1. You should see something like:
+    ![Successful phyloseq run](simple_phylo_test_output.png)
 
 # Phyloseq demo
 1. At this point, you should be able to run the demo
