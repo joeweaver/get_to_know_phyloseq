@@ -52,7 +52,7 @@
 1. Installation instructions at <https://www.rstudio.com/products/rstudio/download/#download>
 
 # Testing Jupyter
-1. Download a zip of the contents of the ```phyloseq_notebooks``` directory and extract to local location of your choice
+1. Download a zip of the contents of the ```phyloseq_notebooks``` [directory](https://github.com/joeweaver/get_to_know_phyloseq/tree/master/phyloseq_notebooks) and extract to local location of your choice
 1. Within a new *Anaconda Command Prompt*, using the ```phylo_demo``` environment change to the directory in which you extracted the zip file
 1. Start an interactive Jupyter session by typing ```jupyter notebook```
 1. This should open a web browser pointing to the jupyter notebook session.
