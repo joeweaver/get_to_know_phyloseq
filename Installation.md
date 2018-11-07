@@ -36,24 +36,24 @@
         * ```devtools::install_github('IRkernel/IRkernel')```
         * ```IRkernel::installspec()```
     
-# Installing Phyloseq and other R packages
+# Installing phyloseq and other R packages
 1. Install the phyloseq package (instructions from <https://joey711.github.io/phyloseq/install.html>)
     1. In the intrepreter enter the following lines:  (Update all packages if prompted).
         * ```source('http://bioconductor.org/biocLite.R')```
         * ```biocLite('phyloseq')```
         * ```packageVersion('phyloseq')```
 1. The previous line tests the installation and should print phyloseq's version, *similar* to ```## [1] '1.22.3'```
-1. In the interpreter install other packages by typing: ```install.packages("tidyverse")```install.packages("rlang") install.packages(c("assertthat"))
-1. Exit the R interpreter by typing ```quit()``` and saying 'no' if prompted to save a workspace image
-1. Leave the interpreter open
+1. In the interpreter install other packages by typing: ```install.packages(c('tidyverse', 'rlang', 'assertthat'))```
+1. Exit the R interpreter by typing ```quit(save="no")``` 
+1. Close the *Anaconda Command Prompt*
 
 # Installing RStudio (Optional)
 1. We will not be using RStudio for the demo, but it is the primary environment in which you will develop R code when not in a jupyter notebook
 1. Installation instructions at <https://www.rstudio.com/products/rstudio/download/#download>
 
 # Testing Jupyter
-1. Download/copy the ```Phyloseq_demo_notebooks.zip``` file and extract to the directory of your choice
-1. Within the ```Anaconda command prompt``` change to the directory in which you extracted the demo files
+1. Download a zip of the contents of the ```phyloseq_notebooks``` directory and extract to local location of your choice
+1. Within a new *Anaconda Command Prompt*, using the ```phylo_demo``` environment change to the directory in which you extracted the zip file
 1. Start an interactive Jupyter session by typing ```jupyter notebook```
 1. This should open a web browser pointing to the jupyter notebook session.
 1. Ensure Jupyter understands R by clicking on the 'new' button, you should see an option to create a new notebook in R, like below:
@@ -68,9 +68,9 @@
 # Phyloseq demo
 1. At this point, you should be able to run the demo
 1. If you still have Jupyter open, load ```phylo_demo.ipnyb```
-1. Otherwise open an anconda prompt, activate the phylo_demo environment, and start a jupyter session
-1. Follow the instructions to learn how to use phyloseq to analyze genomic data
+1. Otherwise open an *Anaconda Command Prompt*, activate the ```phylo_demo``` environment, and start a Jupyter session
+1. Follow the instructions in the notebook to learn how to use phyloseq to analyze genomic data
 1. Stuck?
     1. On Jupyter itself?   <http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Notebook%20Basics.ipynb>
-    1. Figuring out what answers to put into the demo: a filled in version is at ```phylo_demo_completed.ipynb```. Try as much as possible to solve it yourself first, though
-1. Want to learn more: Extensive tutorials at: <https://joey711.github.io/phyloseq/index.html>, [For example](https://joey711.github.io/phyloseq/plot_tree-examples.html#example).
+    1. Figuring out what answers to put into the demo? a filled in version is at ```phylo_demo_completed.ipynb```. Try as much as possible to solve it yourself first, though
+1. Want to learn more phyloseq? Extensive tutorials at: <https://joey711.github.io/phyloseq/index.html>, [For example](https://joey711.github.io/phyloseq/plot_tree-examples.html#example).
