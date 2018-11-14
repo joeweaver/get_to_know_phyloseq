@@ -1,6 +1,7 @@
 # Requirements
 1. Anaconda
 1. R
+1. Git
 1. Phyloseq and other R packages
 1. RStudio (Optional)
 1. Local copy of this repository
@@ -31,6 +32,7 @@
 1. To test your installation, open a new *Anaconda Command Prompt*, activate the ```phylo_demo``` environment, and try to start the R interepreter
     1. Under windows R will be located under a path *similar to*: ```c:\program files\R\R-3.4.2\bin\R.exe```
 1. Make R available to Jupyter  (instructions from <https://irkernel.github.io/installation/>)
+    1. If you do not have ```git``` installed, you can get it from [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
     1. In the intrepreter enter the following lines: (If prompted for a CRAN mirror, select a nearby location).
         * ```install.packages(c('repr', 'IRdisplay', 'evaluate', 'crayon', 'pbdZMQ', 'devtools', 'uuid', 'digest'))```
         * ```devtools::install_github('IRkernel/IRkernel')```
